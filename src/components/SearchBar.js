@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "./SearchBar.css";
 
 const SearchBar = ({onSubmit}) => {
     //this function should not be in use, but only to show that when click a button we can have input data 
@@ -18,8 +19,9 @@ const SearchBar = ({onSubmit}) => {
         setTerm(event.target.value) 
     }
 
-    return <div>
-        <form onSubmit={handleFormSubmit}>           
+    return <div className="search-bar">
+        <form onSubmit={handleFormSubmit}>
+           <label>Enter Search Term</label>           
            <input value={term} type="text" onChange= {handleChange}/>           
         </form>        
         {/* <button onClick={handleClick}>Click Me</button> */}
